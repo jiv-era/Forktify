@@ -33,8 +33,9 @@ const controlSearch = async () => {
         // 5) Render results on UI
         clearLoader();
         searchView.renderResults(state.search.result);
-    }
-}
+    };
+
+};
 
 elements.searchForm.addEventListener('submit', e => {
     e.preventDefault();
