@@ -45,8 +45,10 @@ export default class Recipe {
             });
 
             // 2) Remove parentheses
-            ingredient = ingredient.replace(/ *\([^)]*\) */g, "");
+            ingredient = ingredient.replace(/ *\([^)]*\) */g, '');
             // 3) Parse ingredients into count, unit ad ingredient 
+
+            return ingredient;
         });
         this.ingredients = newIngredients;
     }
