@@ -1,5 +1,9 @@
 import { elements } from './base';
 
+export const clearRecipe = () => {
+    elements.recipe.innerHTML = '';
+};
+
 const createIngredient = ingredient => { `
      <li class="recipe__item">
             <svg class="recipe__icon">
@@ -63,7 +67,7 @@ export const renderRecipe = recipe => {
 
             <div class="recipe__ingredients">
                 <ul class="recipe__ingredient-list">
-                    ${recipe.ingredients.map(el => createIngredient(el))}
+                    ${recipe.ingredients.map(el => createIngredient(el)).join('')}
 
                     <li class="recipe__item">
                         <svg class="recipe__icon">
