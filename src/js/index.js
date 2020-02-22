@@ -78,7 +78,7 @@ elements.searchResPages.addEventListener('click', e => {
 const controlRecipe = async() => {
     // Get ID from url
     const id = window.location.hash.replace('#', '');
-    console.log(id);
+    
 
     if(id) {
         // Prepare UI for changes
@@ -111,7 +111,7 @@ const controlRecipe = async() => {
             );
 
         } catch (err) {
-            console.log(err);
+            
             alert('Error processing recipe!');
         }
     }
@@ -233,5 +233,3 @@ elements.recipe.addEventListener('click', e => {
         controlLike();
     }
 });
-
-window.l = new List();
